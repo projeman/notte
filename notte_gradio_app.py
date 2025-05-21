@@ -521,7 +521,7 @@ if __name__ == "__main__":
     # Gradio'yu kurmak için önce pip install gradio yapmalısınız
     try:
         app = create_gradio_interface()
-        app.launch(share=True)
+        app.launch(server_name="0.0.0.0", server_port=7860)
     except ImportError:
         print("❌ Gradio kütüphanesi bulunamadı!")
         print("Lütfen şu komutu çalıştırarak Gradio'yu yükleyin:")
