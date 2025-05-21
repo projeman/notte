@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  notte:
+    build: .
+    container_name: notte-app
+    ports:
+      - "7860:7860"
+    environment:
+      - GEMINI_API_KEY= # Gerekirse buraya anahtarını ekle
+      - OPENAI_API_KEY=
+      - OPENROUTER_API_KEY=
+      - GROQ_API_KEY=
+      - CEREBRAS_API_KEY=
+    restart: unless-stopped 
